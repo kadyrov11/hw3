@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 
-import UserForm from "./Components/UserForm/UserForm";
+import UserForm from "./Components/UserForm";
 
 import './App.css';
 
