@@ -1,26 +1,12 @@
-import { createStore } from "redux";
+import { combineReducers, createStore } from "redux";
+import userReducer from "./user/userReducer";
+import counterReducer from "./counter/counterReducer";
 
-const initialState = {
-    user: {
-      age: 0,
-      name: "",
-      gender: "",
-    },
-  };
-  
-  const userReducer = (state = initialState, {payload, type}) => {
-    switch (type) {
-        case "NAME":
-            return { ...state, name: payload };
-        case "AGE":
-            return { ...state, age: payload };
-        case "GENDER":
-            return { ...state, gender: payload };
-        default:
-            return state;
-    }
-  };
+const rootReducer = combineReducers({
+  user: userReducer,
+  counter: counterReducer
+})
 
-  const store = createStore(userReducer);
+const store = createStore(rootReducer);
 
-  export default store;
+export default store;

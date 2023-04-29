@@ -1,11 +1,10 @@
 .container{
+    width: fit-content;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .user{
-
-    width: fit-content;
     padding: 20px;
     border: 2px solid rgb(0, 129, 243);
     border-radius: 5px;
@@ -17,4 +16,25 @@
 
 .user input{
     margin-right: 10px;
+}
+
+.counter{
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid rgb(0, 129, 243);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.counter span{
+    margin: 0 20px;
+}
+
+.counter button{
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: inherit;
+    border: 1px solid rgb(0, 129, 243);
+    border-radius: 3px;
 }

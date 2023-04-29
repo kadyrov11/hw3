@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useDispatch } from 'react-redux';
+
+import {setUseAge, setUseGender, setUseName} from '../../redux/user/userActions';
 
 const UserForm = () => {
   const dispatch = useDispatch();
@@ -7,13 +9,13 @@ const UserForm = () => {
   const handleChange = (e) => {
     switch (e.target.name) {
         case "name":
-            dispatch({ type: "NAME", payload: e.target.value });
+            dispatch(setUseName(e.target.value));
             break;
         case "age":
-            dispatch({ type: "AGE", payload: e.target.value });
+            dispatch(setUseAge(e.target.value));
             break;
         case "gender":
-            dispatch({ type: "GENDER", payload: e.target.value });
+            dispatch(setUseGender(e.target.value));
             break;
         default:
             break;
